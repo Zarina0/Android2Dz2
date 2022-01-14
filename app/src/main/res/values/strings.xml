@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Android2dz1</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_the_text">enter_the_text</string>
+    <string name="enter_the_number">enter_the_number</string>
+    <string name="to_send">to_send</string>
+</resources>
