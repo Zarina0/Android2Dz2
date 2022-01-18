@@ -10,11 +10,11 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/brown"
+        android:background="@color/blue"
         app:layout_constraintTop_toTopOf="parent"
         app:subtitleTextColor="@color/black"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@id/nav_host_fragment"/>
+        app:layout_constraintBottom_toTopOf="@id/nav_host_fragment" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
