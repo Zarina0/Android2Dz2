@@ -3,16 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/naf_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/mainBoardFragment">
+
 
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.android2dz1.ui.fragments.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/dataFragment"
-        android:name="com.example.android2dz1.ui.fragments.DataFragment"
-        android:label="fragment_data"
-        tools:layout="@layout/fragment_data" />
+        android:id="@+id/mainBoardFragment"
+        android:name="com.example.android2dz1.boarding.MainBoardFragment"
+        android:label="fragment_main_board"
+        tools:layout="@layout/fragment_main_board" />
 </navigation>
