@@ -6,21 +6,19 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.android2dz1.databinding.ItemTaskBinding;
+import com.example.android2.databinding.ItemTaskBinding;
 
 import java.util.ArrayList;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
 
-    private ItemTaskBinding binding;
-
     ArrayList<String> list = new ArrayList<>();
+    //private ItemTaskBinding binding;
 
     @NonNull
     @Override
     public HomeHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        binding = ItemTaskBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
-        return new HomeHolder(binding);
+        return new HomeHolder(ItemTaskBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
@@ -38,14 +36,15 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
     }
 
     public class HomeHolder extends RecyclerView.ViewHolder {
+        private ItemTaskBinding binding;
 
         public HomeHolder(@NonNull ItemTaskBinding binding) {
             super(binding.getRoot());
+            this.binding = binding;
 
         }
 
-        public void onBind(String text)
-        {
+        public void onBind(String text) {
             binding.titleTv.setText(text);
         }
     }

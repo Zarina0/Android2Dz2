@@ -7,18 +7,22 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android2.databinding.FragmentBoardBinding;
 import com.example.android2dz1.boarding.model.ViewPagerModel;
-import com.example.android2dz1.databinding.FragmentBoardBinding;
 
 import java.util.ArrayList;
 
 public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.ViewPagerHolder> {
 
-    ArrayList<ViewPagerModel> list = new ArrayList<>();
+    ArrayList<ViewPagerModel> list ;
+    OnItemClickListener listener;
 
-    public ViewPagerAdapter(ArrayList<ViewPagerModel> list) {
+    public ViewPagerAdapter(ArrayList<ViewPagerModel> list, OnItemClickListener listener) {
         this.list = list;
+        this.listener = listener;
     }
+
+
 
     @NonNull
     @Override
@@ -52,6 +56,12 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.View
             binding.tvTitle.setText(model.getTitle());
             binding.tvDiscription.setText(model.getDescription());
             binding.imageview.setImageResource(model.getImage());
+            binding.skipBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    listener.onItemlistener();
+                }
+            });
         }
     }
 

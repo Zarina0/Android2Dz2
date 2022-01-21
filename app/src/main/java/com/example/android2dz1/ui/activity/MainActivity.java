@@ -1,13 +1,14 @@
 package com.example.android2dz1.ui.activity;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 
-import android.os.Bundle;
 
-import com.example.android2dz1.R;
-import com.example.android2dz1.databinding.ActivityMainBinding;
+import com.example.android2.R;
+import com.example.android2.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;

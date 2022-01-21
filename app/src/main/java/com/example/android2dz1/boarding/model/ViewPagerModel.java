@@ -6,7 +6,7 @@ public class ViewPagerModel {
     private int image;
     private String btntext;
 
-    public ViewPagerModel(String title, String description, int image,String btntext) {
+    public ViewPagerModel(String title, String description, int image, String btntext) {
         this.title = title;
         this.description = description;
         this.image = image;
